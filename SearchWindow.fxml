@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="140.0" prefWidth="363.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventorygui.SearchWindowController">
+   <children>
+      <VBox prefHeight="156.0" prefWidth="309.0">
+         <children>
+            <JFXTextField fx:id="searchNameTF" labelFloat="true" promptText="Search By Name">
+               <VBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="byKeyWord" labelFloat="true" onAction="#searchByKeyWord" promptText="Search By KeyWords (Upto 2 Characters)">
+               <VBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="bySearchNotesTF" labelFloat="true" promptText="Search By Notes">
+               <VBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+         </children>
+      </VBox>
+      <JFXButton fx:id="buttinByName" layoutX="309.0" layoutY="20.0" onAction="#searchByName" prefHeight="31.0" prefWidth="56.0" stylesheets="@addanddelete.css" text="Go">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="buttonByKeyWord" layoutX="309.0" layoutY="69.0" onAction="#searchByKeyWord1" prefHeight="31.0" prefWidth="56.0" stylesheets="@addanddelete.css" text="Go">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="buttonByNotes" layoutX="309.0" layoutY="118.0" onAction="#searchByNotes" prefHeight="31.0" prefWidth="56.0" stylesheets="@addanddelete.css" text="Go">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXButton>
+   </children>
+</AnchorPane>

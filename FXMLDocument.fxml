@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventorygui.FXMLDocumentController">
+   <children>
+      <BorderPane fx:id="borderPane" focusTraversable="true" prefHeight="200.0" prefWidth="551.0" style="-fx-background-color: black;">
+         <top>
+            <MenuBar style="-fx-background-color: pink;" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu text="File">
+                  <items>
+                        <MenuItem fx:id="newFile" mnemonicParsing="false" onAction="#addDelInventoryWindow" text="Add/Delete Ctrl+N" />
+                        <MenuItem fx:id="listInventoryMenu" mnemonicParsing="false" onAction="#listInventory" text="List Ctrl+L" />
+                        <MenuItem fx:id="searchInventory" mnemonicParsing="false" onAction="#addSearchWindow" text="Search Inventory Ctrl+E" />
+                        <MenuItem fx:id="editInventory" mnemonicParsing="false" onAction="#editInventoryMenu" text="Edit Inventory Ctrl+E" />
+                    <MenuItem fx:id="menuBarClose" mnemonicParsing="false" onAction="#exitInventory" text="Exit Alt+F4" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Settings">
+                    <items>
+                        <Menu mnemonicParsing="false" text="Background Color">
+                          <items>
+                              <CheckMenuItem fx:id="blackMenuEffect" mnemonicParsing="false" onAction="#setBackroundBlack" text="Black" />
+                              <CheckMenuItem fx:id="blueMenuEffect" mnemonicParsing="false" onAction="#setBackroundBlue" text="Blue" />
+                              <RadioMenuItem fx:id="greenMenuEffect" mnemonicParsing="false" onAction="#setBackroundGreen" text="Green" />
+                              <RadioMenuItem fx:id="tealMenuEffect1" mnemonicParsing="false" onAction="#setBackroundTeal" text="Teal" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Picture Effect">
+                           <items>
+                              <CheckMenuItem fx:id="sepiaToneMenuEffect" mnemonicParsing="false" onAction="#setImageSepiaTone" text="Sepia Tone" />
+                              <CheckMenuItem fx:id="glowToneMenuEffect" mnemonicParsing="false" onAction="#setImageGlow" text="Glow" />
+                              <CheckMenuItem fx:id="shadowMenuEffect" mnemonicParsing="false" onAction="#setImageShadow" text="Shadow" />
+                           </items>
+                        </Menu>
+                      <MenuItem fx:id="menuPicEffect1" mnemonicParsing="false" onAction="#actionEvent1" text="No Effects" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                      <MenuItem fx:id="prakashInventoryHelp" mnemonicParsing="false" onAction="#inventoryHelp" text="Inventory Management Help" />
+                        <MenuItem fx:id="about" mnemonicParsing="false" onAction="#aboutInventory" text="About" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <right>
+            <VBox prefHeight="368.0" prefWidth="125.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="463.0" prefWidth="125.0">
+                     <children>
+                        <Button fx:id="addAndDeleteButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#addDelInventoryWindow" prefHeight="117.0" prefWidth="125.0" style="-fx-border-color: black; -fx-background-color: teal;" text="Add/Del">
+                           <graphic>
+                              <ImageView fx:id="addDelImage" fitHeight="66.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="images/addIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="searchButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#addSearchWindow" prefHeight="132.0" prefWidth="125.0" style="-fx-background-color: teal; -fx-border-color: black;" text="Search" textAlignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="42.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/Search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="editButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#editInventory" prefHeight="133.0" prefWidth="125.0" style="-fx-border-color: black; -fx-background-color: teal;" text="Edit">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/editIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="listButton" contentDisplay="TOP" layoutX="10.0" layoutY="82.0" mnemonicParsing="false" onAction="#listInventory" prefHeight="80.0" prefWidth="125.0" style="-fx-border-color: black; -fx-background-color: teal;" text="List">
+                           <graphic>
+                              <ImageView fx:id="listImage" fitHeight="66.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="images/listIcon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="settingsButton" contentDisplay="TOP" layoutX="10.0" layoutY="154.0" mnemonicParsing="false" onAction="#exitInventory" prefHeight="122.0" prefWidth="125.0" style="-fx-border-color: black; -fx-background-color: teal;" text="Exit">
+                           <graphic>
+                              <ImageView fx:id="settingsImage" fitHeight="54.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/exit.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </right>
+         <effect>
+            <DropShadow />
+         </effect>
+         <center>
+            <ImageView fx:id="imageInventory" fitHeight="460.0" fitWidth="477.0" onRotate="#rotateImage" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../images/purchase-guy.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

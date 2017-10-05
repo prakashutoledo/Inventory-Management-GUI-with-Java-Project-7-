@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="inventorygui.AboutInventoryManagementController">
+   <children>
+      <ImageView fitHeight="102.0" fitWidth="145.0" layoutX="237.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Inventory.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="243.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Version 1.0" wrappingWidth="114.55711793899536">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="196.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author: Prakash Khadka" wrappingWidth="251.14111328125">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="270.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2017" wrappingWidth="41.4140625">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextFlow layoutX="82.0" layoutY="313.0" prefHeight="45.0" prefWidth="437.0" textAlignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="All the images are downloaded from Google. Image credit goes to original picture owners and can be removed upon request from them." textAlignment="CENTER" wrappingWidth="465.9999945163727">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <Text layoutX="160.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory Management">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

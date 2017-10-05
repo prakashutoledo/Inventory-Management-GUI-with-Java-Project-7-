@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="376.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Help.jpg" />
+         </image>
+      </ImageView>
+      <TextFlow layoutX="133.0" layoutY="14.0" prefHeight="14.0" prefWidth="315.0" textAlignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory Management Help F1" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <Text layoutX="14.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Key Combination " />
+      <Text layoutX="14.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CTRL+N : Invokes Add or Delete Window" wrappingWidth="354.3418004512787" />
+      <TextFlow layoutX="14.0" layoutY="101.0" prefHeight="40.0" prefWidth="265.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CTRL+L : Invokes List Inventory Window" wrappingWidth="262.9013671875" />
+         </children>
+      </TextFlow>
+      <Text layoutX="14.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CTRL+S : Invokes Search Window" />
+      <Text layoutX="14.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CTRL+E : Invokes Edit Window" />
+      <Text layoutX="14.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALT+F4 : Exit Application" />
+      <Text layoutX="14.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F1 : Invokes Help Window" />
+      <TextFlow layoutX="291.0" layoutY="56.0" prefHeight="200.0" prefWidth="288.0" textAlignment="JUSTIFY">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This progrm will help you to store 200 inventory item of name quantity and it's respective notes. Before you goes into the main window, you are automatically taken into login page where new user have to sign up. Their information are stored into the file which can be access only through user permission" wrappingWidth="282.10693359375" />
+         </children>
+      </TextFlow>
+      <TextFlow layoutX="14.0" layoutY="220.0" prefHeight="146.0" prefWidth="563.0" textAlignment="JUSTIFY">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Entered quantity can be edit and change according to user reques. You can only enter one product of same name. If you tried to enter another product of same name then pop up messege will to come with an options of edit and cancel. There is search window where user can search by name, keyword(first initial of name) and by notes. There is list window where all stored entry are listed in alphabetical order by name but can be change upon user request. There is also option for edit entry and filter search with different keyword by name, quantity and notes." textAlignment="JUSTIFY" />
+         </children>
+      </TextFlow>
+   </children>
+</AnchorPane>

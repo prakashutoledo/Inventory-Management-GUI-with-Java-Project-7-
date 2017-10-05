@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane2" prefHeight="209.0" prefWidth="383.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="inventorygui.EditInventoryController">
+    <stylesheets>
+        <URL value="@editinventory.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="81.0" prefHeight="242.0" prefWidth="440.0" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="editNameTF" labelFloat="true" promptText="Name">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="editQuantity" labelFloat="true" prefHeight="29.0" prefWidth="447.0" promptText="New quantity">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="editNotes" labelFloat="true" prefHeight="29.0" prefWidth="447.0" promptText="New Notes">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+         </children>
+      </VBox>
+      <HBox layoutY="180.0" prefHeight="37.0" prefWidth="384.0">
+         <children>
+            <JFXButton fx:id="saveInventoryButton" onAction="#editInventoryWindow" prefHeight="37.0" prefWidth="194.0" text="Save" />
+            <JFXButton fx:id="cancelButton" onAction="#cancelWindow" prefHeight="37.0" prefWidth="190.0" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

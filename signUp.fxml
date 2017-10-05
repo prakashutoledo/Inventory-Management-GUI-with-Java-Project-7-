@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="rootAnchor" prefHeight="302.0" prefWidth="343.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventorygui.SignUpController">
+    <stylesheets>
+        <URL value="@signup.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutY="-1.0" prefHeight="220.0" prefWidth="343.0" AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+         <children>
+            <JFXTextField fx:id="nameTF" labelFloat="true" promptText="Name">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="lastName" labelFloat="true" promptText="Last Name">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="userNameTF" labelFloat="true" promptText="User Name">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXPasswordField fx:id="passwordTF" labelFloat="true" promptText="Password">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </JFXPasswordField>
+            <JFXPasswordField fx:id="retypePasswordTF" labelFloat="true" onAction="#actionRetypePassword" promptText="Retype Password">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </JFXPasswordField>
+         </children>
+      </VBox>
+      <HBox layoutY="285.0" prefHeight="48.0" prefWidth="343.0">
+         <children>
+            <JFXButton fx:id="saveButton" onAction="#saveButtonAction" prefHeight="48.0" prefWidth="175.0" stylesheets="@addanddelete.css" text="Save" />
+            <JFXButton fx:id="cancelButton" cancelButton="true" onAction="#cancelButtonAction" prefHeight="48.0" prefWidth="167.0" stylesheets="@addanddelete.css" text="Cancel" />
+         </children>
+      </HBox>
+      <Label fx:id="label" layoutX="20.0" layoutY="244.0" prefHeight="21.0" prefWidth="303.0" style="-fx-text-fill: red;" />
+   </children>
+</AnchorPane>
